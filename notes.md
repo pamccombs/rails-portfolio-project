@@ -5,8 +5,9 @@
   -Models
     
     -User
-      -:name
+      -:display_name
       -:email
+      -:password_digest
 
     -Genres
       -:title
