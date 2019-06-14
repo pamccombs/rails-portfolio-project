@@ -2,15 +2,17 @@
 Game Tracker
 Models
 User
-  name
-  email
+  :name
+  :email
 
 Genres
-  title
+  :title
+  #Games.top_ratings_by_genre()
 
 Games
-  title
-  rating
+  :title
+  #self.top_ratings
+  
 
 
 Specs:
@@ -38,7 +40,8 @@ User must have email
 Game must have title
 
 - [ ] Include a class level ActiveRecord scope method (model object & class method name and URL to see the working feature e.g. User.most_recipes URL: /users/most_recipes)
-ratings, in game table
+top_ratings, in game table
+
 
 - [ ] Include signup (how e.g. bcrypt)
 - [ ] Include login (how e.g. bcrypt)
