@@ -2,18 +2,18 @@
 
 -Game Tracker
 
-  -Models
-  -User
-    -:name
-    -:email
+  --Models
+    ---User
+      -----:name
+      -----:email
 
-  -Genres
-    -:title
-    -#Games.top_ratings_by_genre()
+    ---Genres
+      ----:title
+      ----#Games.top_ratings_by_genre()
 
-  -Games
-    -:title
-    -#self.top_ratings
+    ---Games
+      ----:title
+      ----#self.top_ratings
   
 
 
