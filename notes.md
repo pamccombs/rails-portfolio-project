@@ -1,17 +1,19 @@
 # Specifications for the Rails Assessment
-Game Tracker
-Models
-User
-  :name
-  :email
 
-Genres
-  :title
-  #Games.top_ratings_by_genre()
+-Game Tracker
 
-Games
-  :title
-  #self.top_ratings
+  -Models
+  -User
+    -:name
+    -:email
+
+  -Genres
+    -:title
+    -#Games.top_ratings_by_genre()
+
+  -Games
+    -:title
+    -#self.top_ratings
   
 
 
