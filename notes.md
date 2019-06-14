@@ -2,7 +2,8 @@
 Game Tracker
 Models
 User
-  name, email
+  name
+  email
 
 Genres
   title
