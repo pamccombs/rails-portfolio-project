@@ -1,6 +1,6 @@
 rails g model User display_name:string email:string password_digest:string admin:boolean --no-test-framework
 
-rails g model Game name:string tickets:integer nausea_rating:integer happiness_rating:integer min_height:integer --no-test-framework
+rails g model Game title:string rating:integer --no-test-framework
 
 rails g model Genre user_id:integer game_id:integer --no-test-framework
 

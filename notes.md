@@ -10,15 +10,16 @@
       -:password_digest
       -:admin
 
-    -Genres
+    -Genre
       -:user_id
       -:game_id
       -:category
       -#Games.top_ratings_by_genre()
 
-    -Games
+    -Game
       -:title
-      -:rating(1-10) validates :rating, :inclusion => 1..10
+      -:rating(1-10) 
+        -validates :rating, :inclusion => 1..10
       -#Genre.find_by(game_id)
       -#self.top_ratings
   
