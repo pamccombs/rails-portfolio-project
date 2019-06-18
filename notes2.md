@@ -2,7 +2,7 @@ rails g model User display_name:string email:string password_digest:string admin
 
 rails g model Game title:string rating:integer --no-test-framework
 
-rails g model Genre user_id:integer game_id:integer --no-test-framework
+rails g model Genre user_id:integer game_id:integer category:string --no-test-framework
 
 rails g controller Users new --no-test-framework
 
