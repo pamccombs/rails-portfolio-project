@@ -10,4 +10,4 @@ rails g controller Sessions new create destroy --no-helper --no-assets --no-cont
 
 rails g controller Games index new show edit create destroy --no-test-framework
 
-rails g controller Genres create --no-test-framework
+rails g controller Genres --no-test-framework
