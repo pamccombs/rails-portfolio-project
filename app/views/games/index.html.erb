@@ -1,2 +1,32 @@
 <h1>Games#index</h1>
 <p>Find me in app/views/games/index.html.erb</p>
+
+<h1>Listing Games</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Rating</th>
+      <th>Details</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @games.each do |game| %>
+      <tr>
+        <td><%= game.title %></td>
+        <td><%= game.rating%></td>
+        <td>
+          <% if current_user.admin %>
+            <%= link_to "Show #{game.name}", game_path(game) %>
+          <% else %>
+            <%= link_to "Go on #{game.name}", game_path(game) %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<% if current_user.admin %>
+  <%= link_to "New game", new_game_path %>
+<% end %>
