@@ -1,2 +1,10 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
+
+<% if @user.admin %>
+  <p><strong><%= "ADMIN" %></strong></p>
+<% end %>
+<p><strong>Name: </strong><%= @user.display_name %></p>
+
+
+<%= link_to "See Games", games_path %>
