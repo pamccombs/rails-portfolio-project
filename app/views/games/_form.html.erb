@@ -1,8 +1,12 @@
 <%= form_for game do |f| %>
     <%= f.label :title %><br>
     <%= f.text_field :title %><br>
-    <%= f.label :rating, "The rating must be between 1-10." %><br>
+    <%= f.label :rating, "Rating (The rating must be between 1-10.)" %><br>
     <%= f.number_field :rating %><br>
+        <%= fields_for(@genre) do |u| %>
+            <%= u.label :category, "Genre Category (Type of game)" %><br />
+            <%= u.text_field :category %>
+        <% end %>
     <br>
     <%= f.submit %>
 <% end %>

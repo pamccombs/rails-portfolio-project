@@ -9,7 +9,6 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
-    #game.genre_category
   end
 
   def edit
@@ -17,12 +16,12 @@ class GamesController < ApplicationController
   end
 
   def create
-    @game = game.create(game_params)
+    @game = Game.create(game_params)
     redirect_to game_path(@game)
   end
 
   def update
-    @game = game.find(params[:id])
+    @game = Game.find(params[:id])
     @game.update(game_params)
     redirect_to game_path(@game)
   end
