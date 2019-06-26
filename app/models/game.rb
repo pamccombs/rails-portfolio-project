@@ -3,6 +3,7 @@ class Game < ApplicationRecord
 
     has_many :genres
     has_many :users, through: :genres
+    belongs_to :user
 
     def genre_category
         self.try(:genre).try(:category)
@@ -11,6 +12,14 @@ class Game < ApplicationRecord
     def genre_category=(category)
         genre = Genre.find_or_create_by(category: category)
         self.genre = genre
+    end
+
+    def self.search(query)
+        if query.present?
+          where('TITLE like ?', "%#{query}%")
+        else
+          self.all
+        end
     end
 
 end
