@@ -6,6 +6,8 @@
         <%= fields_for(@genre) do |u| %>
             <%= u.label :category, "Genre Category (Type of game)" %><br />
             <%= u.text_field :category %>
+            <%= u.hidden_field :user_id %>
+            <%= u.hidden_field :game_id %>
         <% end %>
     <br>
     <%= f.submit %>

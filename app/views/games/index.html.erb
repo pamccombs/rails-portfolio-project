@@ -16,17 +16,14 @@
         <td><%= game.title %></td>
         <td><%= game.rating%></td>
         <td>
-          <% if current_user.admin %>
+          
             <%= link_to "Show #{game.title}", game_path(game) %>
-          <% else %>
-            <%= link_to "Go on #{game.title}", game_path(game) %>
-          <% end %>
+          
         </td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
-<% if current_user.admin %>
+
   <%= link_to "New game", new_game_path %>
-<% end %>
