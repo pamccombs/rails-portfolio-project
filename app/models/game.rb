@@ -7,6 +7,10 @@ class Game < ApplicationRecord
     has_many :users, through: :genres
     has_and_belongs_to_many :users
 
+    def self.clear
+        self.clear
+    end
+
     def genre_category
         self.try(:genre).try(:category)
     end

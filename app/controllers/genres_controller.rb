@@ -13,7 +13,7 @@ class GenresController < ApplicationController
     end
 
     def create
-        @genre = Genre.create(genre_params)  
+        @genre = Genre.find_or_create_by(genre_params)  
         redirect_to genre_path(@genre.user)
       end
     
