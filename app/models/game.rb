@@ -3,7 +3,7 @@ class Game < ApplicationRecord
 
     has_many :genres
     has_many :users, through: :genres
-    belongs_to :user
+    has_and_belongs_to_many :users
 
     def genre_category
         self.try(:genre).try(:category)
